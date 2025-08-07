@@ -1,261 +1,3 @@
-// import React from 'react';
-// import { Helmet } from 'react-helmet-async';
-// import { useLocation } from 'react-router-dom';
-
-// const SEO = ({ 
-//   title, 
-//   description, 
-//   keywords, 
-//   image, 
-//   type = 'website',
-//   author,
-//   publishedTime,
-//   modifiedTime,
-//   article = false,
-//   course = null,
-//   breadcrumbs = []
-// }) => {
-//   const location = useLocation();
-//   const currentUrl = `https://udaan.x-fuzion.com${location.pathname}`;
-  
-//   // Default values
-//   const defaultTitle = 'Udaan Tech Academy - Launch Your Tech Career in 6 Months';
-//   const defaultDescription = 'Transform your career with job-oriented tech courses. Expert mentorship, real-world projects, and 95% placement rate. Courses in Data Science, Full Stack Development, Cloud Infrastructure & more.';
-//   const defaultKeywords = 'tech courses, data science course, full stack development, cloud computing, machine learning, coding bootcamp, career change, tech training, programming courses, online tech education';
-//   const defaultImage = 'https://udaan.x-fuzion.com/dove.png';
-  
-//   const seoTitle = title ? `${title} | Udaan Tech Academy` : defaultTitle;
-//   const seoDescription = description || defaultDescription;
-//   const seoKeywords = keywords || defaultKeywords;
-//   const seoImage = image || defaultImage;
-
-//   // FIXED: Correct logo URL for production
-//   const logoUrl = 'https://udaan.x-fuzion.com/dove.png'; // Use absolute URL
-
-//   // Note: Favicon in search results is handled by favicon links in HTML head, not structured data
-
-//   // UPDATED: Organization Schema with proper logo
-//   const organizationSchema = {
-//     "@context": "https://schema.org",
-//     "@type": "EducationalOrganization",
-//     "name": "Udaan Tech Academy",
-//     "alternateName": "Udaan Tech",
-//     "url": "https://udaan.x-fuzion.com",
-//     "logo": {
-//       "@type": "ImageObject",
-//       "url": logoUrl,
-//       "width": 600,
-//       "height": 60,
-//       "caption": "Udaan Tech Academy Logo"
-//     },
-//     "description": "Leading tech training institute offering job-oriented courses in Data Science, Full Stack Development, Cloud Infrastructure, and more.",
-//     "address": {
-//       "@type": "PostalAddress",
-//       "streetAddress": "123 Tech Street, Innovation Hub",
-//       "addressLocality": "Bangalore",
-//       "addressRegion": "Karnataka",
-//       "postalCode": "560001",
-//       "addressCountry": "IN"
-//     },
-//     "contactPoint": {
-//       "@type": "ContactPoint",
-//       "telephone": "+91-98765-43210",
-//       "contactType": "customer service",
-//       "email": "info@udaantechacademy.com"
-//     },
-//     "sameAs": [
-//       "https://www.facebook.com/udaantechacademy",
-//       "https://www.twitter.com/udaantechacademy",
-//       "https://www.linkedin.com/company/udaantechacademy",
-//       "https://www.instagram.com/udaantechacademy"
-//     ],
-//     "foundingDate": "2020",
-//     "numberOfEmployees": "50-100",
-//     "slogan": "Launch Your Tech Career"
-//   };
-
-//   // Structured Data for Course (if course prop is provided)
-//   const courseSchema = course ? {
-//     "@context": "https://schema.org",
-//     "@type": "Course",
-//     "name": course.title,
-//     "description": course.description,
-//     "provider": {
-//       "@type": "EducationalOrganization",
-//       "name": "Udaan Tech Academy",
-//       "url": "https://udaan.x-fuzion.com",
-//       "logo": logoUrl
-//     },
-//     "courseMode": course.mode || "online",
-//     "educationalLevel": course.level || "intermediate",
-//     "timeRequired": course.duration,
-//     "offers": {
-//       "@type": "Offer",
-//       "price": course.price?.replace('₹', '').replace(',', ''),
-//       "priceCurrency": "INR",
-//       "availability": "https://schema.org/InStock"
-//     },
-//     "aggregateRating": course.rating ? {
-//       "@type": "AggregateRating",
-//       "ratingValue": course.rating,
-//       "reviewCount": course.students || 100,
-//       "bestRating": "5",
-//       "worstRating": "1"
-//     } : undefined
-//   } : null;
-
-//   // Breadcrumb Schema
-//   const breadcrumbSchema = breadcrumbs.length > 0 ? {
-//     "@context": "https://schema.org",
-//     "@type": "BreadcrumbList",
-//     "itemListElement": breadcrumbs.map((crumb, index) => ({
-//       "@type": "ListItem",
-//       "position": index + 1,
-//       "name": crumb.name,
-//       "item": `https://udaan.x-fuzion.com${crumb.url}`
-//     }))
-//   } : null;
-
-//   // UPDATED: Article Schema with proper logo
-//   const articleSchema = article ? {
-//     "@context": "https://schema.org",
-//     "@type": "Article",
-//     "headline": title,
-//     "description": description,
-//     "image": seoImage,
-//     "author": {
-//       "@type": "Person",
-//       "name": author || "Udaan Tech Academy"
-//     },
-//     "publisher": {
-//       "@type": "Organization",
-//       "name": "Udaan Tech Academy",
-//       "logo": {
-//         "@type": "ImageObject",
-//         "url": logoUrl,
-//         "width": 600,
-//         "height": 60
-//       }
-//     },
-//     "datePublished": publishedTime,
-//     "dateModified": modifiedTime || publishedTime,
-//     "mainEntityOfPage": {
-//       "@type": "WebPage",
-//       "@id": currentUrl
-//     }
-//   } : null;
-
-//   return (
-//     <Helmet>
-//       {/* UPDATED: Enhanced title for better SEO */}
-//       <title>{seoTitle}</title>
-//       <meta name="description" content={seoDescription} />
-//       <meta name="keywords" content={seoKeywords} />
-//       <meta name="author" content="Udaan Tech Academy" />
-//       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-//       <meta name="googlebot" content="index, follow" />
-//       <link rel="canonical" href={currentUrl} />
-
-//       {/* Google-compliant favicon links */}
-//       <link rel="icon" href="/dove.png" />
-//       <link rel="apple-touch-icon" href="/dove.png" />
-//       <link rel="apple-touch-icon-precomposed" href="/dove.png" />
-
-//       {/* Open Graph Meta Tags */}
-//       <meta property="og:title" content={seoTitle} />
-//       <meta property="og:description" content={seoDescription} />
-//       <meta property="og:image" content={seoImage} />
-//       <meta property="og:image:width" content="1200" />
-//       <meta property="og:image:height" content="630" />
-//       <meta property="og:url" content={currentUrl} />
-//       <meta property="og:type" content={type} />
-//       <meta property="og:site_name" content="Udaan Tech Academy" />
-//       <meta property="og:locale" content="en_US" />
-//       <meta property="og:logo" content={logoUrl} />
-
-//       {/* Twitter Card Meta Tags */}
-//       <meta name="twitter:card" content="summary_large_image" />
-//       <meta name="twitter:title" content={seoTitle} />
-//       <meta name="twitter:description" content={seoDescription} />
-//       <meta name="twitter:image" content={seoImage} />
-//       <meta name="twitter:site" content="@udaantechacademy" />
-//       <meta name="twitter:creator" content="@udaantechacademy" />
-
-//       {/* Additional Meta Tags */}
-//       <meta name="theme-color" content="#1e40af" />
-//       <meta name="msapplication-TileColor" content="#1e40af" />
-//       <meta name="application-name" content="Udaan Tech Academy" />
-//       <meta name="apple-mobile-web-app-title" content="Udaan Tech Academy" />
-//       <meta name="apple-mobile-web-app-capable" content="yes" />
-//       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-//       <meta name="mobile-web-app-capable" content="yes" />
-
-//       {/* Language and Geographic Tags */}
-//       <meta name="language" content="English" />
-//       <meta name="geo.region" content="IN-KA" />
-//       <meta name="geo.placename" content="Bangalore" />
-//       <meta name="geo.position" content="12.9716;77.5946" />
-//       <meta name="ICBM" content="12.9716, 77.5946" />
-
-//       {/* Article specific meta tags */}
-//       {article && (
-//         <>
-//           <meta property="article:author" content={author || "Udaan Tech Academy"} />
-//           {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-//           {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-//           <meta property="article:section" content="Technology Education" />
-//           <meta property="article:tag" content={seoKeywords} />
-//         </>
-//       )}
-
-//       {/* UPDATED: Organization Structured Data */}
-//       <script type="application/ld+json">
-//         {JSON.stringify(organizationSchema)}
-//       </script>
-
-//       {courseSchema && (
-//         <script type="application/ld+json">
-//           {JSON.stringify(courseSchema)}
-//         </script>
-//       )}
-
-//       {breadcrumbSchema && (
-//         <script type="application/ld+json">
-//           {JSON.stringify(breadcrumbSchema)}
-//         </script>
-//       )}
-
-//       {articleSchema && (
-//         <script type="application/ld+json">
-//           {JSON.stringify(articleSchema)}
-//         </script>
-//       )}
-
-//       {/* Search Console Verification - REPLACE WITH YOUR ACTUAL CODE */}
-//       <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE" />
-
-//       {/* Bing Webmaster Tools */}
-//       <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
-
-//       {/* Yandex Webmaster */}
-//       <meta name="yandex-verification" content="YOUR_YANDEX_VERIFICATION_CODE" />
-
-//       {/* Preconnect to external domains */}
-//       <link rel="preconnect" href="https://fonts.googleapis.com" />
-//       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-//       <link rel="preconnect" href="https://www.google-analytics.com" />
-//       <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-//       {/* DNS Prefetch */}
-//       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-//       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-//       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-//     </Helmet>
-//   );
-// };
-
-// export default SEO;
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
@@ -279,7 +21,7 @@ const SEO = ({
   // UPDATED: Enhanced default values with location targeting
   const defaultTitle = 'Udaan Tech Academy - Best Tech Training Institute in Bangalore | Launch Your Career in 6 Months';
   const defaultDescription = 'Transform your career at Udaan Tech Academy, the best tech training institute in Bangalore. Job-oriented courses in Data Science, Full Stack Development, Cloud Infrastructure with 95% placement guarantee.';
-  const defaultKeywords = 'udaan tech academy, best tech training institute bangalore, tech courses bangalore, data science course bangalore, full stack development bangalore, cloud computing course bangalore, coding bootcamp bangalore, placement guarantee tech courses';
+  const defaultKeywords = 'udaan tech academy, best tech training institute bangalore, tech courses bangalore, data science course bangalore, full stack development bangalore, cloud computing course bangalore, coding bootcamp bangalore, placement guarantee tech courses, tech training institute near me, coding classes bangalore, programming courses bangalore, machine learning course bangalore, AI course bangalore, web development course bangalore, career change tech bangalore, job oriented tech courses bangalore, online tech courses india, tech bootcamp bangalore, software training institute bangalore';
   const defaultImage = 'https://udaan.x-fuzion.com/og-image.png';
   
   const seoTitle = title ? `${title} | Udaan Tech Academy` : defaultTitle;
@@ -544,8 +286,34 @@ const SEO = ({
       <meta name="keywords" content={seoKeywords} />
       <meta name="author" content="Udaan Tech Academy" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow, max-image-preview:large" />
+      <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
+      <meta name="bingbot" content="index, follow" />
       <link rel="canonical" href={currentUrl} />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="revisit-after" content="7 days" />
+      <meta name="classification" content="Education" />
+      <meta name="category" content="Technology Training" />
+      <meta name="subject" content="Tech Education and Career Training" />
+      <meta name="copyright" content="Udaan Tech Academy" />
+      <meta name="reply-to" content="info@udaantechacademy.com" />
+      <meta name="owner" content="Udaan Tech Academy" />
+      <meta name="url" content={currentUrl} />
+      <meta name="identifier-URL" content={currentUrl} />
+      <meta name="directory" content="submission" />
+      <meta name="pagename" content={seoTitle} />
+      <meta name="subtitle" content={seoDescription} />
+      <meta name="target" content="all" />
+      <meta name="audience" content="all" />
+      <meta name="coverage" content="Worldwide" />
+      <meta name="distribution" content="Global" />
+      <meta name="rating" content="General" />
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="MobileOptimized" content="320" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="format-detection" content="telephone=yes" />
+      <meta name="format-detection" content="address=yes" />
 
       {/* UPDATED: Correct favicon setup for search results */}
       <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
@@ -567,6 +335,13 @@ const SEO = ({
       <meta property="og:site_name" content="Udaan Tech Academy" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:logo" content={logoUrl} />
+      <meta property="og:street-address" content="123 Tech Street, Innovation Hub" />
+      <meta property="og:locality" content="Bangalore" />
+      <meta property="og:region" content="Karnataka" />
+      <meta property="og:postal-code" content="560001" />
+      <meta property="og:country-name" content="India" />
+      <meta property="og:email" content="info@udaantechacademy.com" />
+      <meta property="og:phone_number" content="+91-98765-43210" />
 
       {/* UPDATED: Enhanced Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -576,6 +351,7 @@ const SEO = ({
       <meta name="twitter:image:alt" content="Udaan Tech Academy - Best Tech Training Institute in Bangalore" />
       <meta name="twitter:site" content="@udaantechacademy" />
       <meta name="twitter:creator" content="@udaantechacademy" />
+      <meta name="twitter:domain" content="udaan.x-fuzion.com" />
 
       {/* UPDATED: Geographic and local SEO tags */}
       <meta name="geo.region" content="IN-KA" />
@@ -595,6 +371,21 @@ const SEO = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="mobile-web-app-capable" content="yes" />
+
+      {/* Additional Local SEO Tags */}
+      <meta name="DC.title" content={seoTitle} />
+      <meta name="DC.creator" content="Udaan Tech Academy" />
+      <meta name="DC.subject" content={seoKeywords} />
+      <meta name="DC.description" content={seoDescription} />
+      <meta name="DC.publisher" content="Udaan Tech Academy" />
+      <meta name="DC.contributor" content="Udaan Tech Academy" />
+      <meta name="DC.date" content={new Date().toISOString()} />
+      <meta name="DC.type" content="Text" />
+      <meta name="DC.format" content="text/html" />
+      <meta name="DC.identifier" content={currentUrl} />
+      <meta name="DC.language" content="en" />
+      <meta name="DC.coverage" content="Bangalore, Karnataka, India" />
+      <meta name="DC.rights" content="Copyright Udaan Tech Academy" />
 
       {/* Article specific meta tags */}
       {article && (
@@ -638,9 +429,10 @@ const SEO = ({
       )}
 
       {/* CRITICAL: Search Console Verification - REPLACE WITH ACTUAL CODES */}
-      <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE" />
-      <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
-      <meta name="yandex-verification" content="YOUR_YANDEX_VERIFICATION_CODE" />
+      {/* IMPORTANT: Replace these with your actual verification codes */}
+      {/* <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE" /> */}
+      {/* <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" /> */}
+      {/* <meta name="yandex-verification" content="YOUR_YANDEX_VERIFICATION_CODE" /> */}
 
       {/* Preconnect for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -652,6 +444,7 @@ const SEO = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//images.pexels.com" />
     </Helmet>
   );
 };

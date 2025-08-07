@@ -84,6 +84,7 @@ const HomePage = () => {
         description={pageConfigs.home.description}
         keywords={pageConfigs.home.keywords}
         breadcrumbs={generateBreadcrumbs('/')}
+        type="website"
       />
       
       {/* Hero Section */}
@@ -98,8 +99,11 @@ const HomePage = () => {
                     6 Months
                   </span>
                 </h1>
-                <p className="text-xl text-blue-100">
-                  100% Job-Oriented Courses
+                <h2 className="text-xl text-blue-100 font-semibold">
+                  Best Tech Training Institute in Bangalore | 95% Placement Guarantee
+                </h2>
+                <p className="text-lg text-blue-200">
+                  Transform your career with job-oriented courses in Data Science, Full Stack Development, Cloud Infrastructure. Expert mentorship, real-world projects, and industry partnerships.
                 </p>
               </div>
               

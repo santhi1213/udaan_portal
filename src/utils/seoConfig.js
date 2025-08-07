@@ -151,12 +151,12 @@
 // UPDATED SEO Configuration with better keyword targeting
 export const siteConfig = {
   name: 'Udaan Tech Academy',
-  title: 'Udaan Tech Academy - Launch Your Tech Career in 6 Months',
-  description: 'Transform your career with job-oriented tech courses in Bangalore. Expert mentorship, real-world projects, and 95% placement rate. Courses in Data Science, Full Stack Development, Cloud Infrastructure & more.',
+  title: 'Udaan Tech Academy - Best Tech Training Institute in Bangalore | Launch Your Career in 6 Months',
+  description: 'Transform your career at Udaan Tech Academy, the #1 tech training institute in Bangalore. Job-oriented courses in Data Science, Full Stack Development, Cloud Infrastructure with 95% placement guarantee. Expert mentorship, real-world projects, and industry partnerships.',
   url: 'https://udaan.x-fuzion.com',
   ogImage: 'https://udaan.x-fuzion.com/dove.png',
   // UPDATED: More specific and long-tail keywords for better ranking
-  keywords: 'udaan tech academy, tech courses bangalore, data science course bangalore, full stack development bangalore, cloud computing course bangalore, machine learning training bangalore, coding bootcamp india, career change tech, tech training institute bangalore, programming courses bangalore, online tech education india, job oriented tech courses, placement guarantee tech courses',
+  keywords: 'udaan tech academy, best tech training institute bangalore, tech courses bangalore, data science course bangalore, full stack development bangalore, cloud computing course bangalore, machine learning training bangalore, coding bootcamp india, career change tech, tech training institute bangalore, programming courses bangalore, online tech education india, job oriented tech courses, placement guarantee tech courses, tech training institute near me, coding classes bangalore, AI course bangalore, web development course bangalore, software training institute bangalore, tech bootcamp bangalore, programming bootcamp bangalore, coding institute bangalore, tech academy bangalore, computer training institute bangalore, IT training bangalore, software development course bangalore, tech career change bangalore, coding certification bangalore, programming certification bangalore',
   author: 'Udaan Tech Academy',
   social: {
     twitter: '@udaantechacademy',
@@ -169,34 +169,34 @@ export const siteConfig = {
 // UPDATED: Page-specific SEO with location-based and long-tail keywords
 export const pageConfigs = {
   home: {
-    title: 'Udaan Tech Academy - Best Tech Training Institute in Bangalore | Launch Your Career in 6 Months',
-    description: 'Join Udaan Tech Academy, the best tech training institute in Bangalore. Transform your career with job-oriented courses in Data Science, Full Stack Development, Cloud Infrastructure. 95% placement guarantee.',
-    keywords: 'udaan tech academy, best tech training institute bangalore, tech courses bangalore, data science training bangalore, full stack development course bangalore, career change tech bangalore, coding bootcamp bangalore, placement guarantee tech courses'
+    title: 'Best Tech Training Institute in Bangalore | Udaan Tech Academy | 95% Placement Guarantee',
+    description: 'Join Udaan Tech Academy, the #1 rated tech training institute in Bangalore. Transform your career with job-oriented courses in Data Science, Full Stack Development, Cloud Infrastructure. 95% placement guarantee, expert mentorship, and industry partnerships. Start your tech career today!',
+    keywords: 'best tech training institute bangalore, udaan tech academy, tech courses bangalore, data science training bangalore, full stack development course bangalore, career change tech bangalore, coding bootcamp bangalore, placement guarantee tech courses, tech training institute near me, coding classes bangalore, programming courses bangalore, software training institute bangalore, tech academy bangalore, IT training bangalore, computer training institute bangalore, coding institute bangalore, tech bootcamp bangalore, programming bootcamp bangalore, software development course bangalore, tech career change bangalore, coding certification bangalore, programming certification bangalore, machine learning course bangalore, AI course bangalore, web development course bangalore, cloud computing course bangalore'
   },
   courses: {
-    title: 'Tech Courses Bangalore - Data Science, Full Stack, Cloud Computing | Udaan Tech Academy',
-    description: 'Explore comprehensive tech courses in Bangalore at Udaan Tech Academy. Data Science, Full Stack Development, Cloud Infrastructure, Machine Learning courses with guaranteed placement support.',
-    keywords: 'tech courses bangalore, data science course bangalore, full stack development course bangalore, cloud computing course bangalore, machine learning course bangalore, programming courses bangalore, udaan tech academy courses'
+    title: 'Best Tech Courses in Bangalore | Data Science, Full Stack, Cloud Computing | Udaan Tech Academy',
+    description: 'Explore the best tech courses in Bangalore at Udaan Tech Academy. Comprehensive Data Science, Full Stack Development, Cloud Infrastructure, Machine Learning courses with guaranteed placement support. Expert mentorship, hands-on projects, and industry-recognized certifications.',
+    keywords: 'best tech courses bangalore, tech courses bangalore, data science course bangalore, full stack development course bangalore, cloud computing course bangalore, machine learning course bangalore, programming courses bangalore, udaan tech academy courses, coding courses bangalore, software development courses bangalore, web development course bangalore, AI course bangalore, python course bangalore, java course bangalore, react course bangalore, node js course bangalore, AWS course bangalore, tech training courses bangalore, programming training bangalore, software training bangalore, IT courses bangalore, computer courses bangalore, coding bootcamp courses bangalore, tech certification courses bangalore'
   },
   'career-tracks': {
-    title: 'Career Tracks Bangalore - Complete Job-Ready Tech Programs | Udaan Tech Academy',
-    description: 'Comprehensive career tracks in Bangalore combining multiple courses for complete career transformation. AI Engineer, Full Stack Engineer, Cloud Infrastructure tracks with placement guarantee.',
-    keywords: 'career tracks bangalore, tech career path bangalore, AI engineer track bangalore, full stack engineer track bangalore, cloud infrastructure track bangalore, job ready tech programs bangalore, udaan tech academy career tracks'
+    title: 'Best Tech Career Tracks in Bangalore | Complete Job-Ready Programs | Udaan Tech Academy',
+    description: 'Comprehensive tech career tracks in Bangalore combining multiple courses for complete career transformation. AI Engineer, Full Stack Engineer, Cloud Infrastructure tracks with 95% placement guarantee. Industry-designed curriculum and expert mentorship.',
+    keywords: 'best tech career tracks bangalore, career tracks bangalore, tech career path bangalore, AI engineer track bangalore, full stack engineer track bangalore, cloud infrastructure track bangalore, job ready tech programs bangalore, udaan tech academy career tracks, tech career change bangalore, programming career tracks bangalore, software development career path bangalore, data science career track bangalore, machine learning career path bangalore, web development career track bangalore, cloud computing career path bangalore, tech bootcamp career tracks bangalore, coding career tracks bangalore, IT career tracks bangalore, software career tracks bangalore'
   },
   mentorship: {
-    title: '1:1 Tech Mentorship Bangalore - Learn from Google, Microsoft, Amazon Experts | Udaan',
-    description: 'Get personalized 1:1 tech mentorship in Bangalore from industry experts at Google, Microsoft, Amazon. Career planning, interview preparation, and skill development with Udaan Tech Academy.',
-    keywords: '1:1 tech mentorship bangalore, tech mentorship program bangalore, industry experts mentorship bangalore, career guidance tech bangalore, interview preparation tech bangalore, udaan tech academy mentorship'
+    title: 'Best 1:1 Tech Mentorship in Bangalore | Learn from Google, Microsoft, Amazon Experts | Udaan',
+    description: 'Get personalized 1:1 tech mentorship in Bangalore from industry experts at Google, Microsoft, Amazon. Career planning, interview preparation, and skill development with Udaan Tech Academy. Transform your tech career with expert guidance.',
+    keywords: 'best 1:1 tech mentorship bangalore, tech mentorship program bangalore, industry experts mentorship bangalore, career guidance tech bangalore, interview preparation tech bangalore, udaan tech academy mentorship, tech mentor bangalore, programming mentor bangalore, coding mentor bangalore, software development mentor bangalore, data science mentor bangalore, machine learning mentor bangalore, AI mentor bangalore, web development mentor bangalore, cloud computing mentor bangalore, tech career mentor bangalore, IT mentor bangalore, software mentor bangalore, programming guidance bangalore, coding guidance bangalore'
   },
   blog: {
-    title: 'Tech Blog Bangalore - Career Tips, Tutorials & Industry Insights | Udaan Tech Academy',
-    description: 'Stay updated with latest tech trends, career advice, tutorials from Udaan Tech Academy Bangalore. Expert insights on Data Science, AI, Full Stack Development, Cloud Computing & career guidance.',
-    keywords: 'tech blog bangalore, tech career tips bangalore, programming tutorials bangalore, tech trends bangalore, data science blog bangalore, AI trends bangalore, udaan tech academy blog'
+    title: 'Best Tech Blog in Bangalore | Career Tips, Tutorials & Industry Insights | Udaan Tech Academy',
+    description: 'Stay updated with the latest tech trends, career advice, and tutorials from Udaan Tech Academy Bangalore. Expert insights on Data Science, AI, Full Stack Development, Cloud Computing, and career guidance for tech professionals.',
+    keywords: 'best tech blog bangalore, tech blog bangalore, tech career tips bangalore, programming tutorials bangalore, tech trends bangalore, data science blog bangalore, AI trends bangalore, udaan tech academy blog, coding blog bangalore, software development blog bangalore, web development blog bangalore, machine learning blog bangalore, cloud computing blog bangalore, tech career advice bangalore, programming career tips bangalore, coding career tips bangalore, software career tips bangalore, IT career tips bangalore, tech industry insights bangalore, programming insights bangalore, coding insights bangalore'
   },
   'enroll-now': {
-    title: 'Enroll Now - Join Best Tech Training Institute in Bangalore | Udaan Tech Academy',
-    description: 'Ready to transform your tech career in Bangalore? Enroll in Udaan Tech Academy - the best tech training institute with job-oriented courses and guaranteed placement support.',
-    keywords: 'enroll tech course bangalore, join tech training institute bangalore, tech course admission bangalore, career change program bangalore, udaan tech academy enrollment, best coding bootcamp bangalore'
+    title: 'Enroll Now | Join Best Tech Training Institute in Bangalore | Udaan Tech Academy | 95% Placement',
+    description: 'Ready to transform your tech career in Bangalore? Enroll in Udaan Tech Academy - the #1 tech training institute with job-oriented courses and guaranteed placement support. Start your tech journey today with expert mentorship and industry partnerships.',
+    keywords: 'enroll tech course bangalore, join tech training institute bangalore, tech course admission bangalore, career change program bangalore, udaan tech academy enrollment, best coding bootcamp bangalore, tech course enrollment bangalore, programming course admission bangalore, coding course enrollment bangalore, software training admission bangalore, data science course enrollment bangalore, full stack course admission bangalore, machine learning course enrollment bangalore, AI course admission bangalore, web development course enrollment bangalore, cloud computing course admission bangalore, tech bootcamp enrollment bangalore, coding bootcamp admission bangalore, programming bootcamp enrollment bangalore, software bootcamp admission bangalore'
   }
 };
 // // Generate breadcrumbs for different pages
@@ -226,9 +226,9 @@ export const generateBreadcrumbs = (pathname) => {
 // UPDATED: Course-specific SEO with location targeting
 export const coursesSEO = {
   'data-science-advanced': {
-    title: 'Advanced Data Science Course Bangalore - Machine Learning & AI Training | Udaan Tech Academy',
-    description: 'Master Data Science, Machine Learning & AI in Bangalore with Udaan Tech Academy. 12-week intensive course with hands-on projects, industry mentorship, and guaranteed placement support.',
-    keywords: 'data science course bangalore, machine learning course bangalore, AI course bangalore, data science training bangalore, ML engineer course bangalore, data science bootcamp bangalore, udaan tech academy data science',
+    title: 'Best Data Science Course in Bangalore | Machine Learning & AI Training | Udaan Tech Academy',
+    description: 'Master Data Science, Machine Learning & AI in Bangalore with Udaan Tech Academy. 12-week intensive course with hands-on projects, industry mentorship, and guaranteed placement support. Join 500+ successful data scientists.',
+    keywords: 'best data science course bangalore, data science course bangalore, machine learning course bangalore, AI course bangalore, data science training bangalore, ML engineer course bangalore, data science bootcamp bangalore, udaan tech academy data science, python data science course bangalore, data analytics course bangalore, big data course bangalore, data science certification bangalore, machine learning training bangalore, AI training bangalore, data science institute bangalore, data science academy bangalore, data science classes bangalore, data science coaching bangalore, data science program bangalore, advanced data science course bangalore',
     course: {
       title: 'Advanced Data Science & AI',
       description: 'Master machine learning, deep learning, and AI fundamentals with hands-on projects in Bangalore',
@@ -242,9 +242,9 @@ export const coursesSEO = {
     }
   },
   'full-stack-development': {
-    title: 'Full Stack Web Development Course Bangalore - React, Node.js Training | Udaan Tech Academy',
-    description: 'Learn Full Stack Web Development in Bangalore with React, Node.js & modern technologies. 16-week comprehensive course at Udaan Tech Academy with real-world projects and placement guarantee.',
-    keywords: 'full stack course bangalore, web development course bangalore, React course bangalore, Node.js course bangalore, JavaScript course bangalore, full stack developer training bangalore, udaan tech academy full stack',
+    title: 'Best Full Stack Web Development Course in Bangalore | React, Node.js Training | Udaan Tech Academy',
+    description: 'Learn Full Stack Web Development in Bangalore with React, Node.js & modern technologies. 16-week comprehensive course at Udaan Tech Academy with real-world projects and placement guarantee. Join 320+ successful developers.',
+    keywords: 'best full stack course bangalore, full stack course bangalore, web development course bangalore, React course bangalore, Node.js course bangalore, JavaScript course bangalore, full stack developer training bangalore, udaan tech academy full stack, MEAN stack course bangalore, MERN stack course bangalore, frontend development course bangalore, backend development course bangalore, web development training bangalore, full stack bootcamp bangalore, web development bootcamp bangalore, full stack certification bangalore, web development certification bangalore, full stack institute bangalore, web development institute bangalore, full stack academy bangalore, web development academy bangalore, full stack classes bangalore, web development classes bangalore',
     course: {
       title: 'Full Stack Web Development',
       description: 'Build end-to-end web applications with React, Node.js, and modern technologies in Bangalore',
@@ -258,9 +258,9 @@ export const coursesSEO = {
     }
   },
   'cloud-infrastructure': {
-    title: 'Cloud Computing Course Bangalore - AWS, Azure, DevOps Training | Udaan Tech Academy',
-    description: 'Master Cloud Computing & DevOps in Bangalore with AWS, Azure, Kubernetes training. 10-week intensive course at Udaan Tech Academy with hands-on labs and placement support.',
-    keywords: 'cloud computing course bangalore, AWS course bangalore, DevOps course bangalore, Kubernetes course bangalore, cloud infrastructure training bangalore, Azure course bangalore, udaan tech academy cloud',
+    title: 'Best Cloud Computing Course in Bangalore | AWS, Azure, DevOps Training | Udaan Tech Academy',
+    description: 'Master Cloud Computing & DevOps in Bangalore with AWS, Azure, Kubernetes training. 10-week intensive course at Udaan Tech Academy with hands-on labs and placement support. Join 180+ successful cloud engineers.',
+    keywords: 'best cloud computing course bangalore, cloud computing course bangalore, AWS course bangalore, DevOps course bangalore, Kubernetes course bangalore, cloud infrastructure training bangalore, Azure course bangalore, udaan tech academy cloud, cloud architecture course bangalore, cloud security course bangalore, cloud migration course bangalore, cloud certification bangalore, AWS certification bangalore, Azure certification bangalore, DevOps certification bangalore, cloud engineer course bangalore, cloud developer course bangalore, cloud computing training bangalore, cloud computing bootcamp bangalore, cloud computing institute bangalore, cloud computing academy bangalore, cloud computing classes bangalore',
     course: {
       title: 'Cloud Infrastructure & DevOps',
       description: 'Master AWS, Azure, Kubernetes, and DevOps practices for scalable applications in Bangalore',
