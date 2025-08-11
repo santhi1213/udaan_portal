@@ -51,7 +51,7 @@ const EnrollmentPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
@@ -104,13 +104,13 @@ const EnrollmentPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <SEO 
+      <SEO
         title={pageConfigs['enroll-now'].title}
         description={pageConfigs['enroll-now'].description}
         keywords={pageConfigs['enroll-now'].keywords}
         breadcrumbs={generateBreadcrumbs('/enroll-now')}
       />
-      
+
       {/* Header */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -127,7 +127,7 @@ const EnrollmentPage = () => {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Application Form</h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Personal Information */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -146,7 +146,7 @@ const EnrollmentPage = () => {
                       placeholder="Enter your full name"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
@@ -200,28 +200,6 @@ const EnrollmentPage = () => {
                       ))}
                     </select>
                   </div>
-
-                  <div>
-                    <label htmlFor="learningMode" className="block text-sm font-medium text-gray-700 mb-2">
-                      Preferred Learning Mode *
-                    </label>
-                    <select
-                      id="learningMode"
-                      name="learningMode"
-                      required
-                      value={formData.learningMode}
-                      onChange={handleInputChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    >
-                      <option value="">Select mode</option>
-                      <option value="online">Online</option>
-                      <option value="offline">Offline</option>
-                      <option value="hybrid">Hybrid (Online + Offline)</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="timeSlot" className="block text-sm font-medium text-gray-700 mb-2">
                       Time Slot Preference
@@ -240,27 +218,7 @@ const EnrollmentPage = () => {
                       <option value="weekend">Weekend</option>
                     </select>
                   </div>
-
-                  <div>
-                    <label htmlFor="experience" className="block text-sm font-medium text-gray-700 mb-2">
-                      Current Experience Level
-                    </label>
-                    <select
-                      id="experience"
-                      name="experience"
-                      value={formData.experience}
-                      onChange={handleInputChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    >
-                      <option value="">Select experience</option>
-                      <option value="fresher">Fresher (0 years)</option>
-                      <option value="1-2">1-2 years</option>
-                      <option value="3-5">3-5 years</option>
-                      <option value="5+">5+ years</option>
-                    </select>
-                  </div>
                 </div>
-
                 {/* Resume Upload */}
                 <div>
                   <label htmlFor="resume" className="block text-sm font-medium text-gray-700 mb-2">
@@ -309,9 +267,8 @@ const EnrollmentPage = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 flex items-center justify-center ${
-                    isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
-                  }`}
+                  className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 flex items-center justify-center ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
                 >
                   {isSubmitting ? (
                     <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
@@ -338,10 +295,10 @@ const EnrollmentPage = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Call Us</p>
-                    <p className="text-gray-600">+91 98765 43210</p>
+                    <p className="text-gray-600">+91 63632 29017</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <div className="bg-green-100 p-2 rounded-lg">
                     <Mail className="w-5 h-5 text-green-600" />
@@ -351,7 +308,7 @@ const EnrollmentPage = () => {
                     <p className="text-gray-600">admissions@udaantechacademy.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <div className="bg-orange-100 p-2 rounded-lg">
                     <MapPin className="w-5 h-5 text-orange-600" />
@@ -375,7 +332,7 @@ const EnrollmentPage = () => {
                     <p className="text-gray-600 text-sm">Fill out the enrollment form with your details</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
                   <div>
@@ -383,7 +340,7 @@ const EnrollmentPage = () => {
                     <p className="text-gray-600 text-sm">Free session to discuss your goals and course fit</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
                   <div>
@@ -391,7 +348,7 @@ const EnrollmentPage = () => {
                     <p className="text-gray-600 text-sm">Secure payment and course confirmation</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
                   <div>
